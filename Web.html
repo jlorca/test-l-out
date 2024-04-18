@@ -1,0 +1,34 @@
+<html>
+<script src="https://synhf--jesus2.sandbox.my.site.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'c:PdfOut';
+    const componentName = 'c:displayQuoteExternal';
+    const lightningEndpoint = 'https://synhf--jesus2.sandbox.my.site.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+console.log('before lightninguse');
+    $Lightning.use(
+            appName,
+            function (){
+              console.log('before createComponent');
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+</html>
